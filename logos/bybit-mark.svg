@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TradeHUD: Bybit ICON MARK для compact-контекстов (TrustBar, ExchangeFilter,
+     любые места где иконка ≤ 24px). Оригинальный wordmark bybit.svg
+     рендерится 6.7px высотой в квадратике 20×20 и нечитаем; здесь же —
+     1:1 square с brand-gold подложкой + жирная белая «B». Узнаваемо
+     с расстояния, контрастно на любом фоне, не теряется в чёрном. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="22" fill="#F7A600" />
+  <text
+    x="50"
+    y="74"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    font-family="system-ui, -apple-system, 'Segoe UI', Inter, sans-serif"
+    font-weight="900"
+    font-size="68"
+    letter-spacing="-3"
+  >B</text>
+</svg>

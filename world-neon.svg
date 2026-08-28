@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#07101e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#00ff88" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#7fe7ff" stroke-opacity="0.06" stroke-width="1"/>
+      <path d="M24 0V48M0 24H48" fill="none" stroke="#7fe7ff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="coast" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.70"/>
+      <stop offset="55%" stop-color="#00ff88" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.50"/>
+    </linearGradient>
+    <linearGradient id="coast2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- subtle noise-like scanlines -->
+  <g opacity="0.08">
+    <path d="M0 18H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 66H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 114H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 162H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 210H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 258H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 306H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 354H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 402H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 450H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 498H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 546H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 594H1200" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- continents (stylized, unique) -->
+  <g filter="url(#softGlow)">
+    <!-- North America -->
+    <path d="M165 165
+             C220 120, 315 110, 380 142
+             C418 160, 450 195, 435 230
+             C420 268, 360 292, 310 285
+             C270 280, 210 255, 185 225
+             C165 202, 135 190, 165 165 Z"
+          fill="#00d4ff" fill-opacity="0.06"
+          stroke="url(#coast)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Central America -->
+    <path d="M350 290
+             C380 285, 400 300, 390 320
+             C380 342, 360 350, 338 345
+             C325 338, 330 300, 350 290 Z"
+          fill="#00ff88" fill-opacity="0.05"
+          stroke="url(#coast2)" stroke-width="2.2" stroke-linejoin="round"/>
+    <!-- South America -->
+    <path d="M360 340
+             C410 330, 445 355, 462 402
+             C480 455, 455 525, 410 555
+             C372 580, 335 560, 320 515
+             C305 468, 320 380, 360 340 Z"
+          fill="#00d4ff" fill-opacity="0.05"
+          stroke="url(#coast)" stroke-width="2.4" stroke-linejoin="round"/>
+
+    <!-- Europe -->
+    <path d="M560 170
+             C610 135, 680 135, 720 165
+             C750 188, 735 220, 695 230
+             C655 242, 600 235, 575 210
+             C555 190, 538 183, 560 170 Z"
+          fill="#00ff88" fill-opacity="0.05"
+          stroke="url(#coast2)" stroke-width="2.3" stroke-linejoin="round"/>
+
+    <!-- Africa -->
+    <path d="M630 250
+             C675 235, 735 260, 760 308
+             C790 365, 765 440, 708 468
+             C655 492, 610 465, 590 410
+             C570 355, 590 270, 630 250 Z"
+          fill="#00ff88" fill-opacity="0.04"
+          stroke="url(#coast2)" stroke-width="2.3" stroke-linejoin="round"/>
+
+    <!-- Asia -->
+    <path d="M760 190
+             C830 150, 950 160, 1025 205
+             C1080 240, 1070 290, 1015 312
+             C950 338, 860 320, 810 285
+             C770 258, 730 215, 760 190 Z"
+          fill="#00d4ff" fill-opacity="0.045"
+          stroke="url(#coast)" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Australia -->
+    <path d="M940 420
+             C990 405, 1050 420, 1080 455
+             C1110 492, 1088 535, 1038 548
+             C990 560, 940 540, 922 505
+             C905 470, 912 432, 940 420 Z"
+          fill="#00d4ff" fill-opacity="0.04"
+          stroke="url(#coast)" stroke-width="2.2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- hub dots -->
+  <g opacity="0.75" filter="url(#softGlow)">
+    <circle cx="290" cy="220" r="2.8" fill="#00d4ff"/>
+    <circle cx="325" cy="210" r="2.2" fill="#00ff88"/>
+    <circle cx="610" cy="190" r="2.6" fill="#00ff88"/>
+    <circle cx="690" cy="205" r="2.1" fill="#00d4ff"/>
+    <circle cx="865" cy="245" r="2.7" fill="#00d4ff"/>
+    <circle cx="930" cy="235" r="2.2" fill="#00ff88"/>
+    <circle cx="705" cy="360" r="2.5" fill="#00ff88"/>
+    <circle cx="1020" cy="495" r="2.6" fill="#00d4ff"/>
+  </g>
+</svg>
+
